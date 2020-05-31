@@ -1,0 +1,101 @@
+// common
+export const SET_LOADING = "SET_LOADING";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
+
+// auth
+export const SET_AUTH_LOADING = "SET_AUTH_LOADING";
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+export const USER_LOADED = "USER_LOADED";
+export const AUTH_ERROR = "AUTH_ERROR";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const LOGOUT = "LOGOUT";
+
+// omenu
+export const SET_ACTIVE_OMENU_OPTION = "SET_ACTIVE_OMENU_OPTION";
+
+// alert
+export const SET_ALERT = "SET_ALERT";
+export const REMOVE_ALERT = "REMOVE_ALERT";
+export const CLEAR_ALERTS = "CLEAR_ALERTS";
+export const SET_MESSAGE = "SET_MESSAGE";
+export const CLEAR_MESSAGE = "CLEAR_MESSAGE";
+export const CLEAR_ALL_MESSAGES = "CLEAR_ALL_MESSAGES";
+
+// school
+export const SET_SCHOOL_LOADING = "SET_SCHOOL_LOADING";
+export const GET_SCHOOL = "GET_SCHOOL";
+export const ADD_SCHOOL = "ADD_SCHOOL";
+export const UPDATE_SCHOOL = "UPDATE_SCHOOL";
+export const DELETE_SCHOOL = "DELETE_SCHOOL";
+export const SET_CURRENT_SCHOOL = "SET_CURRENT_SCHOOL";
+export const SCHOOL_ERROR = "SCHOOL_ERROR";
+
+// uploads
+export const SET_UPLOADS_LOADING = "SET_UPLOADS_LOADING";
+export const UPLOAD_SCHOOL_LOGO = "UPLOAD_SCHOOL_LOGO";
+export const UPLOAD_SCHOOL_LOGO_ERROR = "UPLOAD_SCHOOL_LOGO_ERROR";
+export const UPLOAD_EXCEL_STUDENTS = "UPLOAD_EXCEL_STUDENTS";
+export const EXCEL_STUDENTS_ERROR = "EXCEL_STUDENTS_ERROR";
+
+// courses
+export const SET_COURSE_LOADING = "SET_COURSE_LOADING";
+export const CLEAR_COURSE_ERRORS = "CLEAR_COURSE_ERRORS";
+export const GET_ALL_COURSES = "GET_ALL_COURSES";
+export const GET_COURSE = "GET_COURSE";
+export const ADD_COURSE = "ADD_COURSE";
+export const UPDATE_COURSE = "UPDATE_COURSE";
+export const DELETE_COURSE = "DELETE_COURSE";
+export const COURSE_ERROR = "COURSE_ERROR";
+export const RESET_COURSE = "RESET_COURSE";
+
+// groups
+export const SET_GROUP_LOADING = "SET_GROUP_LOADING";
+export const CLEAR_GROUP_ERRORS = "CLEAR_GROUP_ERRORS";
+export const GET_ALL_GROUPS = "GET_ALL_GROUPS";
+export const GET_GROUP = "GET_GROUP";
+export const ADD_GROUP = "ADD_GROUP";
+export const UPDATE_GROUP = "UPDATE_GROUP";
+export const DELETE_GROUP = "DELETE_GROUP";
+export const GROUP_ERROR = "GROUP_ERROR";
+export const RESET_GROUP = "RESET_GROUP";
+export const FILTER_GROUPS = "FILTER_GROUPS";
+export const CLEAR_FILTER_GROUPS = "CLEAR_FILTER_GROUPS";
+
+// students
+export const SET_STUDENT_LOADING = "SET_STUDENT_LOADING";
+export const STUDENT_ERROR = "STUDENT_ERROR";
+export const CLEAR_STUDENT_ERRORS = "CLEAR_STUDENT_ERRORS"; // not used in actions yet
+export const GET_ALL_STUDENTS = "GET_ALL_STUDENTS";
+export const GET_STUDENT = "GET_STUDENT";
+export const ADD_STUDENT = "ADD_STUDENT";
+export const ADD_MANY_STUDENTS = "ADD_MANY_STUDENTS";
+export const UPDATE_STUDENT = "UPDATE_STUDENT";
+export const UPDATE_MANY_STUDENTS = "UPDATE_MANY_STUDENTS";
+export const DELETE_STUDENT = "DELETE_STUDENT";
+export const DELETE_MANY_STUDENTS = "DELETE_MANY_STUDENTS";
+export const RESET_STUDENT = "RESET_STUDENT";
+export const SELECT_STUDENT = "SELECT_STUDENT";
+export const UNSELECT_STUDENT = "UNSELECT_STUDENT";
+export const SELECT_ALL_STUDENTS = "SELECT_ALL_STUDENTS";
+export const CLEAR_STUDENT_SELECTIONS = "CLEAR_STUDENT_SELECTIONS";
+export const FILTER_STUDENTS = "FILTER_STUDENTS";
+export const CLEAR_FILTER_STUDENTS = "CLEAR_FILTER_STUDENTS";
+
+// exams
+export const SET_EXAM_LOADING = "SET_EXAM_LOADING";
+export const EXAM_ERROR = "EXAM_ERROR";
+export const CLEAR_EXAM_ERRORS = "CLEAR_EXAM_ERRORS"; // not used in actions yet
+export const GET_ALL_EXAMS = "GET_ALL_EXAMS";
+export const GET_EXAM = "GET_EXAM";
+export const ADD_EXAM = "ADD_EXAM";
+export const UPDATE_EXAM = "UPDATE_EXAM";
+export const DELETE_EXAM = "DELETE_EXAM";
+export const DELETE_MANY_EXAMS = "DELETE_MANY_EXAMS";
+export const SELECT_EXAM = "SELECT_EXAM";
+export const UNSELECT_EXAM = "UNSELECT_EXAM";
+export const SELECT_ALL_EXAMS = "SELECT_ALL_EXAMS";
+export const CLEAR_EXAM_SELECTIONS = "CLEAR_EXAM_SELECTIONS";
+export const FILTER_EXAMS = "FILTER_EXAMS";
+export const CLEAR_FILTER_EXAMS = "CLEAR_FILTER_EXAMS";

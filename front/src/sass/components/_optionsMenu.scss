@@ -1,0 +1,76 @@
+.omenu {
+	background-color: rgba($color-black, 0);
+	position: relative;
+
+	&__toggle {
+		height: 4rem;
+		width: 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: all 0.25s ease;
+
+		&:hover {
+			background-color: rgba($color-black, 0.075);
+		}
+	}
+
+	&--icon {
+		fill: $color-white;
+		height: 2rem;
+		width: 2rem;
+		position: relative;
+		display: block;
+		z-index: 440;
+
+		&--black {
+			fill: $color-black-light !important;
+		}
+	}
+
+	&__options {
+		display: none;
+		position: absolute;
+		z-index: 441;
+		top: 5rem;
+		right: 0rem;
+		background-color: rgba($color-white, 1);
+		border-radius: 1rem;
+		box-shadow: $shadow-mid;
+		padding: 2rem 0;
+		min-width: 17.5rem;
+		max-width: 22.5rem;
+
+		&--link {
+			display: block;
+			background-color: rgba($color-grey-9, 0);
+			padding: 1rem 2rem;
+			width: 100%;
+			color: $color-black;
+			cursor: pointer;
+			transition: all 0.25s ease;
+
+			&:hover {
+				background-color: rgba($color-grey-10, 1);
+			}
+		}
+
+		&--special {
+			top: 8rem !important;
+			width: 22.5rem;
+		}
+	}
+
+	&--checkbox {
+		display: none;
+
+		&:checked {
+			& ~ .omenu__options {
+				// opacity: 1;
+				// display: block;
+			}
+		}
+	}
+}

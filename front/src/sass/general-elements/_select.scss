@@ -1,0 +1,28 @@
+.select-box {
+	position: relative;
+	display: block;
+	z-index: 997;
+
+	& div {
+		cursor: pointer;
+	}
+
+	&__control {
+		transition: all 0.35s ease;
+
+		&--is-focused {
+			border: 1px solid rgba($color-grey-7, 1) !important;
+			box-shadow: $shadow-focus !important;
+		}
+	}
+
+	&__option {
+		background-color: transparent !important;
+		color: $color-black !important;
+		transition: all 0.35s ease;
+
+		&:hover {
+			background-color: rgba($color-primary-3, 0.5) !important;
+		}
+	}
+}

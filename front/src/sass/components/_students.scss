@@ -1,0 +1,95 @@
+.s-student {
+	width: 100%;
+	padding: 2rem 0;
+
+	@include respond(big-desk) {
+		display: flex;
+	}
+
+	& > *:last-child {
+		margin: 4rem 0;
+
+		@include respond(big-desk) {
+			margin: 0 4rem;
+		}
+	}
+
+	&--form {
+		min-width: 45rem;
+
+		@include respond(big-desk) {
+			width: 50%;
+			max-width: 50rem;
+		}
+	}
+}
+
+.student-form {
+	background-color: rgba($color-white, 1); //dev
+	width: 100%;
+	padding: 3rem 5rem;
+	box-shadow: $shadow-light;
+	border-radius: 1.5rem;
+
+	@include respond(big-desk) {
+		max-height: 85rem; //dev
+		padding: 5rem 3rem;
+	}
+
+	&--content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		@include respond(big-desk) {
+			align-items: center;
+		}
+
+		@include respond(tab-port) {
+			align-items: center;
+		}
+
+		& > * {
+			margin: 1rem 0;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -3rem;
+
+		@include respond(big-desk) {
+			margin: 4rem 0;
+		}
+
+		@include respond(tab-port) {
+			margin: 4rem 0;
+			display: block;
+		}
+
+		& > * {
+			width: 35rem !important;
+			margin: 3rem !important;
+
+			@include respond(big-desk) {
+				min-width: 1rem;
+				max-width: 100%;
+				margin: 0;
+			}
+		}
+
+		@include respond(big-desk) {
+			display: block;
+		}
+	}
+}
+
+.student-list {
+	position: relative;
+	border-radius: inherit;
+}
+
+.student-reports {
+	margin-top: 4rem;
+}

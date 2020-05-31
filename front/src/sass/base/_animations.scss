@@ -1,0 +1,141 @@
+.transition1 {
+	&-appear,
+	&-enter {
+		display: block !important;
+		opacity: 0;
+
+		&-active {
+			display: block !important;
+			opacity: 1;
+			transition: all 0.35s $bezier-1;
+		}
+
+		&-done {
+			display: block !important;
+		}
+	}
+
+	&-exit {
+		display: block !important;
+		opacity: 1;
+
+		&-active {
+			display: block !important;
+			opacity: 0;
+			transition: all 0.35s $bezier-1;
+		}
+
+		&-done {
+			// display: none !important;
+		}
+	}
+}
+
+.modal-transition {
+	&-appear,
+	&-enter {
+		display: block !important;
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.85) !important;
+
+		&-active {
+			opacity: 1;
+			transform: translate(-50%, -50%) scale(1) !important;
+			transition: all 0.35s $bezier-1;
+		}
+
+		&-done {
+			// display: none;
+		}
+	}
+
+	&-exit {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1) !important;
+
+		&-active {
+			opacity: 0;
+			transform: translate(-50%, -50%) scale(0.85) !important;
+			transition: all 0.35s $bezier-1;
+		}
+
+		&-done {
+			display: none !important;
+		}
+	}
+}
+
+.transition3 {
+	&-enter {
+		opacity: 0;
+		display: block !important;
+		transform: translate(2rem, -5rem) scale(0.9);
+
+		&-active {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+			transition: all 0.2s ease-out;
+		}
+
+		&-done {
+			display: block !important;
+		}
+	}
+
+	&-exit {
+		display: block !important;
+		opacity: 1;
+		transform: translateY(0) scale(1);
+
+		&-active {
+			opacity: 0;
+			transform: translate(2rem, -5rem) scale(0.9);
+			transition: all 0.2s $bezier-1;
+		}
+	}
+}
+
+// ---------- SAL animations ---------- //
+[data-sal].sal {
+	transition-delay: 0.35s;
+	transition-duration: 0.75s;
+	transition-timing-function: ease-out;
+
+	@include respond(menu-break) {
+		transition-delay: 0.25s;
+		transition-duration: 0.5s;
+	}
+
+	&--slow {
+		transition-delay: 0.4s;
+		transition-duration: 1s;
+		transition-timing-function: ease-out;
+
+		@include respond(menu-break) {
+			transition-delay: 0.35s;
+			transition-duration: 0.75s;
+		}
+	}
+}
+
+[data-sal].sal2 {
+	transition-delay: 0.45s;
+	transition-duration: 0.75s;
+	transition-timing-function: ease-out;
+
+	@include respond(menu-break) {
+		transition-delay: 0.3s;
+		transition-duration: 0.6s;
+	}
+
+	&--slow {
+		transition-delay: 0.45s;
+		transition-duration: 1.25s;
+		transition-timing-function: ease-out;
+
+		@include respond(menu-break) {
+			transition-delay: 0.35s;
+			transition-duration: 0.75s;
+		}
+	}
+}

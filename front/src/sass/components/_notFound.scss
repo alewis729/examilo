@@ -1,0 +1,28 @@
+.notFound {
+	width: 50rem;
+	margin: 0 auto;
+	position: relative;
+	height: 80vh;
+
+	&--content {
+		position: absolute;
+		top: 45%;
+		transform: translateY(-50%);
+		width: 100%;
+		text-align: center;
+	}
+
+	&--title {
+		font-size: 8rem;
+		line-height: 6rem;
+	}
+
+	&--text {
+		&--special {
+			color: $color-primary-2;
+		}
+	}
+
+	&--link {
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"name": "examilo-back",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js",
+		"server": "nodemon server.js",
+		"client": "npm start --prefix front",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"express": "^4.17.1",
+		"express-fileupload": "^1.1.6",
+		"express-validator": "^6.5.0",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.9.16",
+		"xlsx": "^0.15.6"
+	},
+	"devDependencies": {
+		"concurrently": "^4.1.2",
+		"nodemon": "^1.19.4"
+	}
+}

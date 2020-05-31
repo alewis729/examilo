@@ -1,0 +1,73 @@
+.s-course {
+	padding: 2rem 0;
+	display: grid;
+	grid-gap: 4rem;
+	grid-template-columns: repeat(auto-fit, minmax(45rem, 50rem));
+	// grid-template-rows: repeat(auto-fit, 9rem);
+
+	&--form {
+		grid-row: 1 / span 5;
+	}
+}
+
+.course-form {
+	background-color: rgba($color-white, 1); //dev
+	width: 100%;
+	padding: 5rem 3rem;
+	box-shadow: $shadow-light;
+	border-radius: 1.5rem;
+
+	&--content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		& > * {
+			margin: 1rem 0;
+		}
+	}
+
+	&__items {
+		margin-top: 4rem;
+	}
+}
+
+.course {
+	background-color: rgba($color-white, 1);
+	border-radius: 1rem;
+	box-shadow: $shadow-light;
+	height: 9rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: default;
+	transition: all 0.25s ease;
+
+	&:hover {
+		box-shadow: $shadow-focus;
+	}
+
+	&--content {
+		width: 90%;
+		display: flex;
+		align-items: center;
+	}
+
+	&--title {
+		color: $color-black;
+		font-size: 2.5rem;
+		line-height: 2.5rem;
+		font-weight: 600;
+		flex-grow: 1;
+		margin-right: 2rem;
+	}
+
+	&--abrev {
+		margin-right: 3rem;
+		color: $color-grey-8;
+		font-size: $font-size-default;
+		line-height: $font-lineheight-default;
+		font-weight: 600;
+	}
+}
