@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import PropTypes from "prop-types";
-import uuid from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import SVG from "./SVG";
 
 const OptionsMenu = ({ id, options, setOption, blackDots, special }) => {
@@ -62,10 +62,7 @@ const OptionsMenu = ({ id, options, setOption, blackDots, special }) => {
 				{!special ? (
 					<SVG
 						icon="dots"
-						className={
-							"omenu--icon" +
-							(blackDots ? " omenu--icon--black" : "")
-						}
+						className={"omenu--icon" + (blackDots ? " omenu--icon--black" : "")}
 					/>
 				) : (
 					<span>Opciones</span>
@@ -86,7 +83,7 @@ const OptionsMenu = ({ id, options, setOption, blackDots, special }) => {
 							<div
 								className="omenu__options--link"
 								onClick={onSelect}
-								key={uuid.v4()}
+								key={uuidv4()}
 								data-option={option.text}
 							>
 								<span
@@ -100,13 +97,10 @@ const OptionsMenu = ({ id, options, setOption, blackDots, special }) => {
 							<Link
 								to={option.link}
 								className="omenu__options--link"
-								key={uuid.v4()}
+								key={uuidv4()}
 								data-link={true}
 							>
-								<span
-									className="omenu__options--text"
-									data-link={true}
-								>
+								<span className="omenu__options--text" data-link={true}>
 									{option.text}
 								</span>
 							</Link>
