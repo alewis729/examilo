@@ -1,0 +1,6 @@
+{
+	"env": {
+		"MONGODB": "",
+		"JWT_SECRET": ""
+	}
+}
