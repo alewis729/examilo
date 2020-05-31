@@ -1,6 +1,5 @@
 node_modules
-front/node_modules
-front/build
+build
 
 .DS_Store
 .env

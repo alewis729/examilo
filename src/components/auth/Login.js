@@ -43,8 +43,7 @@ const Login = ({
 			let msg = "Error al iniciar sesión.";
 
 			if (errId === 3) {
-				msg =
-					"No existe un usuario registrado con el email proporcionado.";
+				msg = "No existe un usuario registrado con el email proporcionado.";
 			} else if (errId === 5) {
 				msg = "La contraseña es incorrecta.";
 			} else if (errId === 5.1) {
@@ -71,8 +70,7 @@ const Login = ({
 	const onSubmit = (e) => {
 		e.preventDefault();
 		if (email === "") setAlert("El email no fue proporcionado.");
-		else if (password === "")
-			setAlert("La contraseña no fue proporcionada.");
+		else if (password === "") setAlert("La contraseña no fue proporcionada.");
 		else {
 			loginUser({
 				email,
@@ -86,8 +84,7 @@ const Login = ({
 			<div className="form">
 				<div className="form--content">
 					<h2>
-						Ingresar a{" "}
-						<span className="text--primary">examilo</span>
+						Ingresar a <span className="text--primary">examilo</span>
 					</h2>
 					<form onSubmit={onSubmit}>
 						<Input
@@ -138,7 +135,6 @@ const mapStateToProps = (state) => ({
 	errId: state.auth.error
 });
 
-export default connect(
-	mapStateToProps,
-	{ loginUser, setAlert, clearMsg }
-)(Login);
+export default connect(mapStateToProps, { loginUser, setAlert, clearMsg })(
+	Login
+);
