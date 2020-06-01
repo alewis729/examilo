@@ -12,8 +12,8 @@ const Logo = ({ ...props }) => (
 				y2="0.285"
 				gradientUnits="objectBoundingBox"
 			>
-				<stop offset="0" stop-color="#cec22e" />
-				<stop offset="1" stop-color="#f2f24c" />
+				<stop offset="0" stopColor="#cec22e" />
+				<stop offset="1" stopColor="#f2f24c" />
 			</linearGradient>
 			<linearGradient
 				id="b"
@@ -21,7 +21,7 @@ const Logo = ({ ...props }) => (
 				y1="0.5"
 				x2="0.788"
 				y2="0.579"
-				xlink:href="#a"
+				xlinkHref="#a"
 			/>
 			<linearGradient
 				id="c"
@@ -29,7 +29,7 @@ const Logo = ({ ...props }) => (
 				y1="0.199"
 				x2="0.578"
 				y2="0.777"
-				xlink:href="#a"
+				xlinkHref="#a"
 			/>
 		</defs>
 		<g transform="translate(9359.154 16133.456)">

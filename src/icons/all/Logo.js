@@ -12,8 +12,8 @@ const Logo = ({ ...props }) => (
 				y2="0.285"
 				gradientUnits="objectBoundingBox"
 			>
-				<stop offset="0" stop-color="#cec22e" />
-				<stop offset="1" stop-color="#f2f24c" />
+				<stop offset="0" stopColor="#cec22e" />
+				<stop offset="1" stopColor="#f2f24c" />
 			</linearGradient>
 			<linearGradient
 				id="b"
