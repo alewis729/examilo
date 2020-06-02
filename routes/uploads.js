@@ -18,9 +18,7 @@ router.post("/", auth, (req, res) => {
 	const fileTypes = ["png", "jpg", "jpeg"];
 
 	if (!fileTypes.includes(fileExt)) {
-		return res
-			.status(400)
-			.json({ id: 5, msg: "File is not of image type." });
+		return res.status(400).json({ id: 5, msg: "File is not of image type." });
 	}
 
 	if (fileName.indexOf(" ") >= 0) {
@@ -28,7 +26,7 @@ router.post("/", auth, (req, res) => {
 	}
 
 	file.mv(
-		`${__dirname}/../front/public/user_uploads/school_logos/${fileName}`,
+		`${__dirname}/../public/user_uploads/school_logos/${fileName}`,
 		(err) => {
 			if (err) {
 				console.error(err);
@@ -58,23 +56,19 @@ router.post("/students/", auth, (req, res) => {
 	const fileExt = path.extname(fileName).substr(1);
 
 	if (fileExt !== "xlsx") {
-		return res
-			.status(400)
-			.json({ id: 5, msg: "File is not of type '.xlsx'." });
+		return res.status(400).json({ id: 5, msg: "File is not of type '.xlsx'." });
 	}
 
 	if (fileName.indexOf(" ") >= 0) {
 		fileName = fileName.split(" ").join("_");
 	}
 
-	const filePathFull = `${__dirname}/../front/public/user_uploads/students/${fileName}`;
+	const filePathFull = `${__dirname}/../public/user_uploads/students/${fileName}`;
 
 	file.mv(filePathFull, (err) => {
 		if (err) {
 			console.error(err);
-			return res
-				.status(500)
-				.json({ id: 1, msg: "Server error.", error: err });
+			return res.status(500).json({ id: 1, msg: "Server error.", error: err });
 		}
 
 		const wb = xlsx.readFile(filePathFull);
