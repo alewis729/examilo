@@ -1,15 +1,21 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { useModal } from "react-modal-hook";
 
 import { Header, Navigation } from "@/components/organisms";
 
 const HeaderSimple = ({ ...props }) => {
+	const history = useHistory();
 	const [isNavigationOpen, setIsNavigationOpen] = useState(false);
 
-	const handleMenuClick = () => {
+	const handleShowNavigation = () => {
 		if (isNavigationOpen) hideNavigation();
 		else showNavigation();
 		setIsNavigationOpen(!isNavigationOpen);
+	};
+
+	const handleNavigation = value => {
+		history.push(value);
 	};
 
 	const handleClose = () => {
@@ -18,10 +24,14 @@ const HeaderSimple = ({ ...props }) => {
 	};
 
 	const [showNavigation, hideNavigation] = useModal(({ in: open }) => (
-		<Navigation open={open} onClose={handleClose} />
+		<Navigation
+			open={open}
+			onNavigate={handleNavigation}
+			onClose={handleClose}
+		/>
 	));
 
-	return <Header onMenuClick={handleMenuClick} {...props} />;
+	return <Header onMenuClick={handleShowNavigation} {...props} />;
 };
 
 export default HeaderSimple;

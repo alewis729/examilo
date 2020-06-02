@@ -16,7 +16,7 @@ const Default = ({ header, children }) => {
 				</AppBar>
 			</div>
 			<Container className={classes.main} component="main" maxWidth="xl">
-				<Box py={6}>{children}</Box>
+				<Box p={6}>{children}</Box>
 			</Container>
 		</Container>
 	);

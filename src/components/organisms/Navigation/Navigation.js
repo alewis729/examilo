@@ -20,7 +20,7 @@ import {
 
 import { useStyles } from "./style";
 
-const Navigation = ({ open, onItemClick, onClose }) => {
+const Navigation = ({ open, onNavigate, onClose }) => {
 	const classes = useStyles();
 
 	const items = [
@@ -36,7 +36,6 @@ const Navigation = ({ open, onItemClick, onClose }) => {
 	return (
 		<Drawer
 			open={open}
-			// variant="persistent"
 			anchor="left"
 			onClose={onClose}
 			ModalProps={{ BackdropProps: { invisible: true } }}
@@ -49,7 +48,7 @@ const Navigation = ({ open, onItemClick, onClose }) => {
 						button
 						key={value}
 						className={classes.item}
-						onClick={() => onItemClick(value)}
+						onClick={() => onNavigate(value)}
 					>
 						<ListItemIcon>{icon}</ListItemIcon>
 						<ListItemText primary={label} />
@@ -62,12 +61,12 @@ const Navigation = ({ open, onItemClick, onClose }) => {
 
 Navigation.propTypes = {
 	open: PropTypes.bool.isRequired,
-	onItemClick: PropTypes.func.isRequired,
+	onNavigate: PropTypes.func.isRequired,
 	onClose: PropTypes.func.isRequired,
 };
 
 Navigation.defaultProps = {
-	onItemClick: () => {},
+	onNavigate: () => {},
 	onClose: () => {},
 };
 
